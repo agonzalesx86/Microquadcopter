@@ -1,0 +1,51 @@
+﻿Ben’s Review/Comments:
+
+
+Part Placement:
+- Design fits within a 19,345 mm2 box
+- Reset and power jumpers are far enough from propeller
+- Battery near center and IMU is center of axis of quadcopter
+- FTDI Headers are not along the side of board, hard to see labels/names
+- Microcontroller is close to antenna, which is close to edge of board
+Logo:
+*** Did not see a logo
+Antenna and Antenna Driver:
+- Traces are on layer 1 (top)
+- Traces between Antenna and Balun are extra thick
+- The two capacitors are close to the Balun
+- Trace between balun and antenna is short
+- The Ground pours are on the proper layer surrounding the antenna and its components
+- The vias are connected to gnd
+- Both pads are surrounded by pours
+- All traces in antenna and drivers are relevant to components there
+Power and Ground:
+- Power plane does reach under all 4 motor drivers
+- Vbat power plane is at least 0.5mm everywhere
+- 3V power plane reaches the microcontroller and imu
+- GND and VBAT planes extends everywhere and are of the same layer (layer 2)
+*** Voltage Regulator is not over VBAT plane
+IMU:
+- IMU is at center of board
+- Caps are of reasonable distance to IMU
+- Orientation of IMU corresponds with Pitch (X) and Roll (Y)
+- No traces under IMU center and only ground plane is under IMU
+Headers:
+- FTDI silkscreen labels are on board
+Microcontroller:
+- Resonator traces do lie in top plane
+- Cap and resonator layout is similar to redboard
+- Decoupling caps are reasonable distance to microcontroller
+Power Supply: 
+- Caps are near voltage regulator 
+
+Motor Driver:
+- Traces are thick enough to handle large current
+
+
+Mechanical: 
+- Board is most symmetric
+- Diameter of motor holders are about 8.4mm
+- No stray holes in board
+- Accounted for propeller size and accounted for proper clearance
+Aesthetic: 
+- Board is mostly neat and tidy

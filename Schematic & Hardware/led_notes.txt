@@ -1,0 +1,56 @@
+General Information
+————————————————————————————————————————-----------------------------------------------
+Class:				CSE - 190
+Group:				Now This is Quad Racing
+Names:				Alexander Gonzales
+				Ben Phan
+————————————————————————————————————————-----------------------------------------------
+Summary:
+
+TOTAL CURRENT CONSUMED BY LEDS:					190 mA
+TOTAL COST OF LEDS AND RESISTORS:				$2.31
+
+————————————————————————————————————————-----------------------------------------------
+Content: Description and Information regarding the LEDs chosen:
+
+FOR LED 1 (PURPLE LED) 		
+DIST:								DIGIKEY
+DIST PN:							1416-1961-1-ND
+NOM CURRENT:							100 mA
+FORWARD VOLTAGE:						2.8 V
+DIGIKEY LED 1 COST:						$1.09
+VOLTAGE SUPPLY METHOD:						Micro Controller
+
+VOLTAGE DROP NEEDED ACROSS RESISTOR:				0.2V
+RESISTOR VALUE CHOSEN:						2 Ohm	
+CURRENT CONSUMPTION:						100 mA*
+POWER DISSIPATION:						0.02 W*
+
+RESISTOR FOR LED 1
+DIST:								DIGIKEY
+DIST PN:							311-2.0ARCT-ND
+MFR PN:								RC0805JR-072RL
+MAX POWER RATING:						0.125 W
+DIGIKEY COST:							$0.10
+
+-	-	-	-	-	-	-	-	-	-	-	-	-
+
+FOR LED 2 (ORANGE LED)
+DIST:								DIGIKEY
+DIST PN:							1416-1492-6-ND
+NOM CURRENT:							100 mA
+FORWARD VOLTAGE:						2.1 V
+DIGIKEY LED 2 COST:						$1.02
+VOLTAGE SUPPLY METHOD:						Micro Controller
+
+VOLTAGE DROP NEEDED ACROSS RESISTOR:				0.9V
+RESISTOR VALUE CHOSEN:						10 Ohm	
+CURRENT CONSUMPTION:						90 mA*
+POWER DISSIPATION:						0.081 W*
+
+RESISTOR FOR LED 2
+DIST:								DIGIKEY
+DIST PN:							311-10.0CRCT-ND
+MFR PN:								RC0805FR-0710RL
+MAX POWER RATING:						0.125 W
+DIGIKEY COST:							$0.10

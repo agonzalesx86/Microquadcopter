@@ -1,0 +1,9 @@
+---------------------------------------------------------------------------
+NowThisIsQuadracing Group metadata File:
+---------------------------------------------------------------------------
+
+1. Color choice for the Quadcopter:				BLACK
+
+2. DRU File Used:						QuadClass-Resources/Eagle/DRU/jlcpcb-4layer.dru
+
+3. Board Dimensions:						136 x 136 (mm)

@@ -1,0 +1,40 @@
+CSE - 291
+
+Design Review for: 	Now This Is QuadRacing 
+by: 			TheBabyBlueCruiser
+
+----------------------------------------------------------------------------
+Notes/Comments on Schematic:
+
+- tugged on all symbols in schematic- everything is tied together/connected.
+- used show @ to trace all wires.  There is nothing connected that shouldn't be and it looks like all nets are connected for the powers,  grounds, etc.
+- neat decoupling caps and LED's separate from main components
+- all the power pins are connected to the correct power pins (3V and V_Batt)
+- all ground pins are connected to the right ground pins (GND and Batt_GND)
+- PWM tabs are distinctly named and correspond to individual motor controllers
+- FIX: CUSTOM LED polarity is off for both.  Cathode should be towards ground for both purple and orange leds, not towards 3V.
+- FIX: the 100 Ohm resistor in each of the motor circuits should be in between the PWM signal and the capacitor - check the most recent motor schematic as posted on piazza
+- Clean up: remove all dangling labels (no nets with only 1 or zero connections)
+- Clean up: add a value to your crystal to make extra clear what its resonant frequency is
+- Clean up: The LED attached to PB7 is labeled RED, but its on a device that is always green
+- Not sure: Your switch's two pins "1*2" and "3*2" are in reversed orientation than ours are on our schematics. Is the switch polar? Does this matter?
+
+----------------------------------------------------------------------------
+Notes/Comments on Devices, Symbol, and Packages
+
+- FIX: Orange LED anode pad is 2.7 x 0.8.  Recommended is 2.4 x 0.82.  It looks like the mask layer is what they recommend.
+- FIX: Orange LED cathode pad is 2.7 x 1.9.  Recommended is 2.4 x 1.93.  It looks like the mask layer is fine.
+- FIX: Orange LEDs have a top copper strip between the pads.  I don't see that in your package.  I'm guessing it needs to be there  because your LEDs are on the higher end of current usage so more contact with copper?  Your pad dimensions may interfere with this since they are above the minimum.
+- FIX: Orange LED pads are not extended for easy soldering (you would increase the 0.82 (anode) and 1.93 (cathode) dimensions and move the center of these pads outwards.
+- FIX: All comments for the orange also apply to purple, the pad sizes are the same and it lacks what the copper top strip requires.
+- Clean up: There are packages for orange and purple LEDs in Ben_custom library, but no device using them here.
+-IMU is indented/indicated where pin 1 is.  
+- FIX: IMU does not have space in between the tStop for the pads.  The solder can flow over and connect all of the pins where there is no spacing.
+- You have very tight tKeepOut on packages.  Good for tight packing on pcb later on.
+- FIX: MOSFETS pads and mask sizes look good, but its way out from under the device, so the device might not connect to the solder - move the pads and tstops closer to the device on the Y axis, using the layout specified in the datasheet.
+- Clean up: Having two custom libraries with duplicate components makes it confusing where components are drawn from...less duplicate parts, especially if they differ in designed packages.
+- Added 10KO resistor seems fine that it has the same pcb package as the other 0805's.
+- Clean up: Resistors in Ben_custom appear to all use the Resistor_0805 package, except the 0 Ohms variant.  The package made for this one involves much further spacing between pads...even though its the same size 0805/series.  Note that in custom library, all resistors are spread apart by this same further spacing. If these are all the same size, they should have the same package. I didn't see a datasheet saying different sizing.
+- FIX: The pads on the custom 0805 resistors (in the non-0hm package) should start at +/-0.65 X away from the center, not +/- 0.725 as you have it. The pads extend far enough out, so just make them larger inwards.
+- Clean up: 0805_0Ohm is the wrong name for a device with variants that have non-zero resistances
+- Clean up: Duplicate naming on Ceramic_Cap0805 in Ben_custom

@@ -1,0 +1,37 @@
+CSE - 190
+
+Design Review for: 	TheBabyBlueCruiser 
+by: 			Now This Is QuadRacing
+
+----------------------------------------------------------------------------
+Notes/Comments on Schematic:
+
+(Ben's Review)
+- names are visible on all devices
+- generally organized and neat schematic with no wires crossing
+- all the power pins are connected to the correct power pins (3V and V_Batt)
+- all ground pins are connected to the right ground pins (GND and Batt_GND)
+- PWM tabs are properly named and corresponds to right motor controller
+
+(Alex's Review)
+
+----------------------------------------------------------------------------
+Notes/Comments on Devices, Symbol, and Packages
+
+(Alex's Review)
+- All of the packages have a bounding box in tKeepout
+- All of the packages include a part outline in tPlace
+- position(x) of the side pads for the imu may be slightly off.
+- position(y) of the of the upper and lower pads
+- the pads for the yellow LED are currently 0.8 mm apart, should be 0.7 mm.
+- the pads for the yellow LED are also not extended by 1mm (optional)
+- both available on digikey as single-order items
+- the pad size should be 1.25 x (1mm +0.35mm) instead of 1.25mm x 1mm
+
+(Ben's Review)
+- extend resistor pads 1mm beyond side of package
+- extend cap pads 1mm beyond side of package
+- duplicate name layer on capacitor 
+- IMU missing 45 deg indentation to show orientation (not sure if needed)
+- packages and devices are properly connected to the right pins
+- symbols are properly labeled and on proper grid size (0.1")

@@ -1,0 +1,13 @@
+New Team
+1. Rx0, PB6, PB7, SDA, N6, RESET, SDA, SCL, PWM3 routed through internal layers. Not sure if its really a problem or not
+2. Several clearance issues show up in DRC
+3. Mosi trace under the imu
+4. FTDI silkscreen name goes off of the board
+5. J1 and some other names over their go off the board
+6. There is a stray 3V wire on the board, look at -9.4488, -5.1816
+7. Non 45 degree increment wire, look at the SDA trace at 8.47,-29.05
+8. Non 45 degree increment wire, look at the SCL trace at 5.93, -29.05
+9. Some parts of your 3V and GND pour look a bit too thin, needs to be at least 5mm in width at any point, check left of the antenna and        below the crystal
+10. I believe you need to place a dimension for the structure that holds your motors, though I did measure the “arms” to be thick enough.
+11. Your capacitors for the antenna may be a too far? Check the schematic red board for reference, it looks like they placed their capacitor     very close to, and had their wires connected almost directly to the balun
+12. Messy/ stray SDA wires around -6.096, 10.8204
